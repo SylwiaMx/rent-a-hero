@@ -198,6 +198,14 @@ p {
 			top:10px;
 			width:120px;
       color: white;
-
-
 		}
+
+    @media screen and (min-width: 480px) {
+        #menu {display: block !important;}
+       }
+
+      @media screen and (max-width: 480px) {
+        #menu {display: none;}
+        #menu li {width: 100%; padding: 2% 0;}
+        #menu-button {display: block;}
+       }
