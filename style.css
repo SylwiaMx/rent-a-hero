@@ -91,7 +91,7 @@ footer {
 			margin:0 auto;
 			width:500px;
 			position:relative;
-			top:50px;
+			top:30px;
 			bordtseter-radius: 5px;
       box-shadow: 0 0 3px 2px #C0C0C0;
       margin-bottom: 20px;
@@ -158,6 +158,31 @@ footer {
 			top:10px;
 			width:120px;
       color: white;
-
-
 		}
+
+    #menu-button {
+      display: none;
+    }
+    #menu {
+         list-style: none;
+         float: left; width: 100%;
+    }
+
+    #menu li {
+      float: right;
+       display: block;
+        padding: 0 1%;
+      }
+    #menu li a {
+      text-decoration: none;
+    }
+
+    @media screen and (min-width: 480px) {
+        #menu {display: block !important;}
+       }
+
+      @media screen and (max-width: 480px) {
+        #menu {display: none;}
+        #menu li {width: 100%; padding: 2% 0;}
+        #menu-button {display: block;}
+       }
