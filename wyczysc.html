@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DODAJ HEROSA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <SCRIPT LANGUAGE="JavaScript" SRC="./scriptsa.js"></SCRIPT>
+
+</head>
+
+
+
+<body>
+ <section class="splash1">
+
+   <div>
+     <div>
+       <button id="menu-button">MENU</button>
+       <ul id="menu">
+         <li><a href="./wyczysc.html" target="_self">WYCZYŚĆ BAZĘ</a></li>
+         <hr class="pion">
+         <li><a href="./usun.html" target="_self">USUŃ HEROSA</a></li>
+         <hr class="pion">
+         <li><a href="./edytuj.html" target="_self">EDYTUJ HEROSA</a></li>
+         <hr class="pion">
+         <li><a href="./dodaj.html" target="_self">DODAJ HEROSA</a></li>
+       </ul>
+      </div>
+    <div>
+      <a href="./index.html" target="_self">  <img src='./images/logo.png' border='0' alt='logo'></a>
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+</section>
+
+  <div data-ng-app="myApp" data-ng-controller="Controller" class="container" dir="ltr">
+
+  <h1>Heroes</h1>
+  <hr/>
+  <table  dir="ltr" class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+
+       <th class="reverse">ID</th>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Picture</th>
+       <th>Price</th>
+        <th>Available</th>
+      <th class="text-center">Remove
+      </th>
+
+
+      </tr>
+
+    </thead>
+    <tbody>
+        <tr data-ng-repeat ="data in datas |filter: search">
+        <td >{{data.id}}</td>
+        <td >{{data.name}}</td>
+        <td >{{data.description}}</td>
+        <td >{{data.image}}</td>
+        <td >{{data.price}}</td>
+        <td >{{data.isAvailable}}</td>
+        <td class="text-center"><a data-ng-click="removeData($index)" href="javascript:void(0);"><span class="close">&times;</span></a></td>
+        </tr>
+
+    </tbody>
+
+
+
+  </table>
+
+</div>
+<br><br><br><br><br>
+
+<footer>
+		Need a Hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o JavaScript
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+<SCRIPT LANGUAGE="JavaScript" SRC="./scriptsa.js"></SCRIPT>
+
+
+
+</body>
+
+
+
+</html>

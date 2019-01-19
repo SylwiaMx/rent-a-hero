@@ -1,0 +1,24 @@
+{
+  "name": "rent-a-hero",
+  "version": "1.0.0",
+  "description": "nauka node.js",
+  "main": "scipt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SylwiaMx/rent-a-hero.git"
+  },
+  "keywords": [
+    "rent",
+    "a",
+    "hero"
+  ],
+  "author": "Sylwia Mx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SylwiaMx/rent-a-hero/issues"
+  },
+  "homepage": "https://github.com/SylwiaMx/rent-a-hero#readme"
+}

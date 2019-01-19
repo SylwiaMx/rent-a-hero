@@ -6,7 +6,12 @@
     <title>DODAJ HEROSA</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <SCRIPT LANGUAGE="JavaScript" SRC="./scriptsa.js"></SCRIPT>
 </head>
+
+
 
 <body>
  <section class="splash1">
@@ -33,59 +38,28 @@
 
 </section>
 
-<form>
-  <div class="box">
-    <h1 align="center">Dodaj herosa</h1>
-    <label>
-     <input type="text" class="wpis" name="id" id="id" value="ID"/>
-    </label>
-    <label>
-     <input type="text" class="wpis" name="Name" id="name" value="Name"/>
-    </label>
-    <label>
-     <input type="text" class="wpis size" name="description" id="description" value="Description"/>
-    </label>
-    <label>
-     <input type="text" class="wpis" name="image" id="picture" value="Image"/>
-    </label>
-    <label>
-     <input type="text" class="wpis" name="price" id="price" value="Price"/>
-   </label>
-   <label>
+  <div data-ng-app="myApp" data-ng-controller="Controller" class="container" dir="ltr">
 
-     <label>
-      <input type="text" class="wpis" name="isAvailable" id="isAvailable" value="Is Available? type: true/false"/>
-    </label>
-     </label>
+  <h1>Heroes</h1>
+  <hr/>
+  <table  dir="ltr" class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
 
+       <th class="reverse">ID</th>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Picture</th>
+       <th>Price</th>
+        <th>Available</th>
+      <th class="text-center">Remove
+      </th>
 
-   <label>
-      <input type="reset" name="reset" id="resetbtn" class="wpis" value="Reset" />
-    <button type="button" class="wpis" onClick="updateForm();"/>submit</button>
-   </label>
- </div>
-</form>
-<br><br><br><br><br>
-<br>
-<div data-ng-app="myApp" data-ng-controller="Controller" class="container" dir="ltr">
-<table id="results"  dir="ltr" class="table table-bordered table-striped">
-  <thead class="thead-dark">
-        <tr>
-        <th scope="col" width="120" class="reverse">ID</th>
-        <th scope="col" width="120">Name</th>
-        <th scope="col" width="120">Description</th>
-        <th scope="col" width="120">Picture</th>
-
-        <th scope="col" width="120">Price</th>
-        <th scope="col" width="120">Available</th>
 
       </tr>
+
     </thead>
-
-
-      <h1>Heroes</h1>
-      <hr/>
-<tbody>
+    <tbody>
         <tr data-ng-repeat ="data in datas">
         <td >{{data.id}}</td>
         <td >{{data.name}}</td>
@@ -93,18 +67,30 @@
         <td >{{data.image}}</td>
         <td >{{data.price}}</td>
         <td >{{data.isAvailable}}</td>
-
+        <td class="text-center"><a data-ng-click="removeData($index)" href="javascript:void(0);"><span class="close">&times;</span></a></td>
         </tr>
 
     </tbody>
+
+
+
   </table>
+
 </div>
+<br><br><br><br><br>
+
 <footer>
 		Need a Hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o JavaScript
 </footer>
-<SCRIPT LANGUAGE="JavaScript" SRC="./dodaj.js"></SCRIPT>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
 <SCRIPT LANGUAGE="JavaScript" SRC="./scriptsa.js"></SCRIPT>
+
+
+
 </body>
+
+
+
 </html>
